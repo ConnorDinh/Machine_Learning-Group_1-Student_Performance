@@ -52,18 +52,3 @@ print(dt_features)
 print("\nRandom Forest Regression:")
 print(rf_features)
 
-'''
-plt.figure(figsize=(7,4))
-
-plt.bar(
-    rf_features['Feature'],
-    rf_features['Importance']
-)
-
-plt.title("Random Forest Feature Importance")
-plt.xlabel("Features")
-plt.ylabel("Importance")
-plt.xticks(rotation=15)
-
-plt.tight_layout()
-plt.show()'''
