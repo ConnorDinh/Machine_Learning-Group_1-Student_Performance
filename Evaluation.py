@@ -3,32 +3,38 @@ import pandas as pd
 from Linear_Regression import Linear_Regression
 from Decision_Tree import Decision_Tree
 from Random_Forest_Regression import Random_Forest_Regression
+from KNN_Regression import KNN_Regression
 import matplotlib.pyplot as plt
 
 lr_mae, lr_rmse, lr_r2, lr_coef = Linear_Regression()
 dt_mae, dt_rmse, dt_r2, dt_features = Decision_Tree()
 rf_mae, rf_rmse, rf_r2, rf_features = Random_Forest_Regression()
+knn_mae, knn_rmse, knn_r2, knn_features = KNN_Regression()
 
 results = pd.DataFrame({
-    'Model': [
-        'Linear Regression',
-        'Decision Tree',
-        'Random Forest'
+    "Model": [
+        "Linear Regression",
+        "Decision Tree",
+        "Random Forest",
+        "KNN Regression"
     ],
-    'MAE': [
+    "MAE": [
         lr_mae,
         dt_mae,
-        rf_mae
+        rf_mae,
+        knn_mae
     ],
-    'RMSE': [
+    "RMSE": [
         lr_rmse,
         dt_rmse,
-        rf_rmse
+        rf_rmse,
+        knn_rmse
     ],
-    'R²': [
+    "R²": [
         lr_r2,
         dt_r2,
-        rf_r2
+        rf_r2,
+        knn_r2
     ]
 })
 
