@@ -58,3 +58,5 @@ print(dt_features)
 print("\nRandom Forest Regression:")
 print(rf_features)
 
+print("\nKNN Regression:")
+print(knn_features)

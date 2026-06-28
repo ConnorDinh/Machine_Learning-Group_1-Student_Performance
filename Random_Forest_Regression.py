@@ -32,7 +32,7 @@ class Random_Forest_Regression:
 		rf_r2 = r2_score(y_test, rf_pred)
 		features = pd.DataFrame({'Feature': ['weekly_self_study_hours', 'attendance_percentage', 'class_participation'], 'Importance': self.rf.feature_importances_})
 
-		plt.figure(figsize=(18,8))
+		'''plt.figure(figsize=(18,8))
 
 		plot_tree(
 			self.rf.estimators_[0],
@@ -41,6 +41,6 @@ class Random_Forest_Regression:
 			fontsize=10
 		)
 
-		plt.show()
+		plt.show()'''
 
 		return rf_mae, rf_rmse, rf_r2, features.sort_values(by='Importance', ascending=False)

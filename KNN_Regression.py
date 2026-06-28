@@ -60,3 +60,12 @@ class KNN_Regression:
         })
 
         return knn_mae, knn_rmse, knn_r2, features
+
+if __name__ == "__main__":
+   knn_mae, knn_rmse, knn_r2, knn_features = KNN_Regression()
+
+   print("KNN Regression Results")
+   print("MAE:", knn_mae)
+   print("RMSE:", knn_rmse)
+   print("R²:", knn_r2)
+   print(knn_features)

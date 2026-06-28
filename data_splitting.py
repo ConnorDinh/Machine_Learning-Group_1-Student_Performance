@@ -5,6 +5,8 @@ import numpy as np
 de = DataExtracting()
 df = de.get_data_frame()
 
+print(de.isMissingValue())
+
 X = df[['weekly_self_study_hours', 'attendance_percentage', 'class_participation']].values
 y = df['total_score'].values
 
